@@ -1,4 +1,4 @@
-FROM osrf/ros:noetic-desktop-full
+FROM osrf/ros:melodic-desktop-full
 
 # Add ubuntu user with same UID and GID as your host system, if it doesn't already exist
 # Since Ubuntu 24.04, a non-root user is created by default with the name vscode and UID=1000
@@ -30,7 +30,7 @@ RUN echo "source /opt/ros/${ROS_DISTRO}/setup.bash" >> ~/.bashrc
 ################################
 
 # OpenCV Version
-ARG OPENCV_VERSION="4.5.0"
+ARG OPENCV_VERSION="4.5.5"
 
 # Install build dependencies
 RUN sudo apt install -y wget unzip lsb-release build-essential cmake git pkg-config libgtk-3-dev \
@@ -61,6 +61,7 @@ RUN cmake -D CMAKE_BUILD_TYPE=RELEASE \
     -D INSTALL_PYTHON_EXAMPLES=ON \
     -D OPENCV_GENERATE_PKGCONFIG=ON \
     -D OPENCV_EXTRA_MODULES_PATH=/opencv/opencv_contrib/modules \
+    -D OPENCV_ENABLE_NONFREE=ON \
     -D PYTHON_EXECUTABLE=/usr/local/bin/python \
     -D BUILD_EXAMPLES=ON .. 
    
