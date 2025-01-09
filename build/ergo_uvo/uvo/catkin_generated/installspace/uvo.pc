@@ -1,8 +1,0 @@
-prefix=/rosws/install
-
-Name: uvo
-Description: Description of uvo
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
