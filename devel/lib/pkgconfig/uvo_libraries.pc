@@ -1,0 +1,8 @@
+prefix=/rosws/devel
+
+Name: uvo_libraries
+Description: Description of uvo_libraries
+Version: 0.0.0
+Cflags: -I/rosws/src/ergo_uvo/uvo_libraries/include
+Libs: -L${prefix}/lib -luvo_libraries
+Requires: roscpp rospy std_msgs

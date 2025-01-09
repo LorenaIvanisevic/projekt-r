@@ -1,0 +1,2 @@
+ergo_uvo/uvo:ergo_uvo/uvo_libraries
+-DCATKIN_DEVEL_PREFIX=/rosws/devel -DCMAKE_INSTALL_PREFIX=/rosws/install -G Unix Makefiles
